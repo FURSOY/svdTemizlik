@@ -170,9 +170,9 @@ main {
 .nav__burger,
 
 .nav__close {
-
+    width: 100%;
     color: var(--black-color);
-
+    height: 100%;
 }
 
 
@@ -222,13 +222,9 @@ main {
 
 
 .nav__toggle {
-
     position: relative;
-
-    width: 32px;
-
-    height: 32px;
-
+    width: 40px;
+    height: 40px;
 }
 
 
@@ -561,9 +557,7 @@ main {
 
 
     .nav__toggle {
-
         display: none;
-
     }
 
 
