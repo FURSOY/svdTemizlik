@@ -1,0 +1,178 @@
+@media screen and (max-width: 1118px) {
+    .contactmain {
+        background: hsla(206, 75%, 33%, 1);
+        background: linear-gradient(90deg, hsla(206, 75%, 33%, 1) 0%, hsla(204, 89%, 11%, 1) 100%);
+        background: -moz-linear-gradient(90deg, hsla(206, 75%, 33%, 1) 0%, hsla(204, 89%, 11%, 1) 100%);
+        background: -webkit-linear-gradient(90deg, hsla(206, 75%, 33%, 1) 0%, hsla(204, 89%, 11%, 1) 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#155C91", endColorstr="#032135", GradientType=1);
+    }
+
+    .MainTitle {
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .Adres.Title {
+        display: inline-flex;
+        align-items: center;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        width: 250px;
+        height: 50px;
+        background: #52d8f4;
+        color: white;
+        padding-left: 20px;
+    }
+
+    .AdresUl {
+        list-style-type: circle;
+    }
+
+    .AdresText {
+        margin-top: 10px;
+        margin-left: 10px;
+        color: white;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 25px;
+    }
+
+    ion-icon {
+        margin-right: 5px;
+    }
+
+    .map {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        border-radius: 15px;
+    }
+
+    .İletişim.Title {
+        display: inline-flex;
+        align-items: center;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        width: 250px;
+        height: 50px;
+        background: #52d8f4;
+        color: white;
+        padding-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .ContactBox {
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Information {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1118px) {
+    .contactmain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: hsla(206, 75%, 33%, 1);
+        background: linear-gradient(90deg, hsla(206, 75%, 33%, 1) 0%, hsla(204, 89%, 11%, 1) 100%);
+        background: -moz-linear-gradient(90deg, hsla(206, 75%, 33%, 1) 0%, hsla(204, 89%, 11%, 1) 100%);
+        background: -webkit-linear-gradient(90deg, hsla(206, 75%, 33%, 1) 0%, hsla(204, 89%, 11%, 1) 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#155C91", endColorstr="#032135", GradientType=1);
+    }
+
+    .MainTitle {
+        color: white;
+        margin-bottom: 20px;
+
+    }
+
+    .ContainarContact {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .Box {
+        display: inline-block;
+        max-width: 700px;
+    }
+
+    .Contact.Box {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .Adres.Title {
+        display: inline-flex;
+        align-items: center;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        width: 400px;
+        height: 50px;
+        background: #52d8f4;
+        color: white;
+        padding-left: 20px;
+    }
+
+    .İletişim.Title {
+        display: inline-flex;
+        align-items: center;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        width: 400px;
+        height: 50px;
+        background: #52d8f4;
+        color: white;
+        padding-left: 20px;
+    }
+
+    .AdresText {
+        margin-top: 10px;
+        margin-left: 10px;
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 25px;
+        display: flex;
+        justify-content: center;
+    }
+
+    ion-icon {
+        margin-right: 5px;
+    }
+
+    .map {
+        display: block;
+        margin-top: 20px;
+        margin-left: 20px;
+        border-radius: 15px;
+    }
+
+    .ContactBox {
+        width: 100%;
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .Information {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+}
