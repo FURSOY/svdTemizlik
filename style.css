@@ -81,7 +81,7 @@
 /*=============== BASE ===============*/
 
 * {
-
+    user-select: none;
     box-sizing: border-box;
 
     padding: 0;
