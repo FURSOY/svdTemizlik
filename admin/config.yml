@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: main # Sizin ana GitHub dalınızın adı (master veya main olabilir)
+
+# authentication (Kimlik doğrulama)
+publish_mode: editorial_workflow # Taslak ve yayınlama iş akışı sağlar
+
+media_folder: "comments" # Yüklenen resimlerin kaydedileceği klasör (HTML'de kullandığınız yol)
+public_folder: "/comments" # Bu klasördeki resimlere genel erişim yolu
+
+collections:
+  - name: "comments" # CMS'te görünen koleksiyon adı
+    label: "Müşteri Yorumları" # Yönetici panelinde görünen başlık
+    folder: "content/comments" # Markdown/YAML dosyalarının kaydedileceği klasör
+    create: true # Yeni yorum eklemeye izin ver
+    slug: "{{slug}}" # Dosya adları için otomatik slug oluştur (örn: comment-1, comment-2)
+    fields: # Her bir yorum öğesi için hangi alanları düzenleyecekler
+      - {label: "Başlık (Internal Use)", name: "title", widget: "string", required: true}
+      - {label: "Yorum Görseli", name: "image", widget: "image", allow_multiple: false, required: true}
+      - {label: "Alternatif Metin (SEO)", name: "altText", widget: "string", required: false}
+      # - {label: "Yorum Metni (İsteğe Bağlı)", name: "text", widget: "markdown", required: false} # Eğer metin de eklerseniz
