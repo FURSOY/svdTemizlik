@@ -12,14 +12,14 @@ public_folder: "/comments" # Bu klasördeki resimlere web üzerinden erişim yol
 
 # Koleksiyonlar (yönetilecek içerik türleri)
 collections:
-  - name: "comments" # CMS'te görünen koleksiyon adı (örn: URL'de /admin/#/collections/comments)
-    label: "Müşteri Yorumları" # Yönetici panelinde görünen başlık
-    folder: "content/comments" # Markdown/YAML dosyalarının kaydedileceği klasör (root'a göre)
-    create: true # Yeni yorum eklemeye izin ver
-    slug: "{{slug}}" # Oluşturulan dosya adları için slug (örn: my-new-comment.md)
-    fields: # Her bir yorum öğesi için hangi alanları düzenleyecekler
+  - name: "comments"
+    label: "Müşteri Yorumları"
+    folder: "content/comments"
+    create: true
+    slug: "{{slug}}"
+    format: json # BURAYI EKLEYİN
+    extension: json # BURAYI EKLEYİN (dosyaların .json uzantısıyla kaydedilmesini sağlar)
+    fields:
       - {label: "Başlık (Internal Use)", name: "title", widget: "string", required: true}
       - {label: "Yorum Görseli", name: "image", widget: "image", allow_multiple: false, required: true}
       - {label: "Alternatif Metin (SEO)", name: "altText", widget: "string", required: false}
-      # Eğer yorum metni de eklemek isterseniz, aşağıdaki satırı aktif edin:
-      # - {label: "Yorum Metni (İsteğe Bağlı)", name: "text", widget: "markdown", required: false}
