@@ -1,21 +1,25 @@
+# config.yml
 backend:
   name: git-gateway
-  branch: main # Sizin ana GitHub dalınızın adı (master veya main olabilir)
+  branch: main # BURAYI KONTROL EDİN: Kendi GitHub deponuzun ana dal adı (main veya master)
 
-# authentication (Kimlik doğrulama)
+# Bu kısım kimlik doğrulama için gerekli, değişiklik yapmayın
 publish_mode: editorial_workflow # Taslak ve yayınlama iş akışı sağlar
 
-media_folder: "comments" # Yüklenen resimlerin kaydedileceği klasör (HTML'de kullandığınız yol)
-public_folder: "/comments" # Bu klasördeki resimlere genel erişim yolu
+# Medya (görsel) ayarları
+media_folder: "comments" # Yüklenen resimlerin kaydedileceği GitHub'daki klasör (root'a göre)
+public_folder: "/comments" # Bu klasördeki resimlere web üzerinden erişim yolu (root'a göre)
 
+# Koleksiyonlar (yönetilecek içerik türleri)
 collections:
-  - name: "comments" # CMS'te görünen koleksiyon adı
+  - name: "comments" # CMS'te görünen koleksiyon adı (örn: URL'de /admin/#/collections/comments)
     label: "Müşteri Yorumları" # Yönetici panelinde görünen başlık
-    folder: "content/comments" # Markdown/YAML dosyalarının kaydedileceği klasör
+    folder: "content/comments" # Markdown/YAML dosyalarının kaydedileceği klasör (root'a göre)
     create: true # Yeni yorum eklemeye izin ver
-    slug: "{{slug}}" # Dosya adları için otomatik slug oluştur (örn: comment-1, comment-2)
+    slug: "{{slug}}" # Oluşturulan dosya adları için slug (örn: my-new-comment.md)
     fields: # Her bir yorum öğesi için hangi alanları düzenleyecekler
       - {label: "Başlık (Internal Use)", name: "title", widget: "string", required: true}
       - {label: "Yorum Görseli", name: "image", widget: "image", allow_multiple: false, required: true}
       - {label: "Alternatif Metin (SEO)", name: "altText", widget: "string", required: false}
-      # - {label: "Yorum Metni (İsteğe Bağlı)", name: "text", widget: "markdown", required: false} # Eğer metin de eklerseniz
+      # Eğer yorum metni de eklemek isterseniz, aşağıdaki satırı aktif edin:
+      # - {label: "Yorum Metni (İsteğe Bağlı)", name: "text", widget: "markdown", required: false}
