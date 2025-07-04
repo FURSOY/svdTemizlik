@@ -1,0 +1,171 @@
+.Comment.Title {
+    display: inline-flex;
+    align-items: center;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 410px;
+    height: 50px;
+    background: #52d8f4;
+    color: white;
+    padding-left: 20px;
+}
+
+.AdresText {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+.CommentBox {
+    padding: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 992px) {
+    .CommentBox {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .CommentBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .CommentBox {
+        grid-template-columns: 1fr;
+    }
+}
+
+.Commentgrid-item {
+    padding: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.Commentgrid-item-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+
+
+body.no-scroll {
+    overflow: hidden;
+    /* Sayfa kaydırmayı engeller */
+}
+
+.modal {
+    display: none;
+    /* Varsayılan olarak gizli */
+    position: fixed;
+    /* Ekranı sabitler */
+    z-index: 1000;
+    /* Diğer her şeyin üzerinde görünür */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* Modal içeriğinin kendi içinde kaydırmasını engeller */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Yarı şeffaf siyah arka plan */
+
+    /* İçeriği (resim ve butonları) ortalamak için Flexbox */
+    display: flex;
+    /* JavaScript ile 'flex' olarak ayarlandığında aktif olur */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    /* Blok element olarak göster */
+    max-width: 90%;
+    /* Maksimum genişlik */
+    max-height: 90%;
+    /* Maksimum yükseklik */
+    object-fit: contain;
+    /* Resmin oranlarını korurken tamamen görünmesini sağlar */
+}
+
+.close {
+    position: absolute;
+    /* Modala göre konumlanır */
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* --- İleri/Geri Butonları --- */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    /* Modala göre konumlanır */
+    top: 50%;
+    /* Dikeyde ortaya hizala */
+    transform: translateY(-50%);
+    /* Kendi yüksekliğinin yarısı kadar yukarı kaydırarak tam ortaya al */
+    width: auto;
+    padding: 16px;
+    /* margin-top: -50px; bu satırı kaldırın veya açıklama satırı yapın, 'transform' bunu yönetir */
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Hafif bir arka plan */
+}
+
+/* Konumlandırma */
+.next {
+    right: 0;
+    /* Sağa yasla */
+    border-radius: 3px 0 0 3px;
+    /* Sadece sol tarafını yuvarla */
+}
+
+.prev {
+    left: 0;
+    /* Sola yasla */
+    border-radius: 0 3px 3px 0;
+    /* Sadece sağ tarafını yuvarla */
+}
+
+/* Hover efekti */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

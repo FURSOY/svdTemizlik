@@ -28,9 +28,9 @@
 
     --header-color: #fff;
 
-    --nav-hover-color: #bdbdae;
+    --nav-hover-color: #dddddd;
 
-    --nav-list-color: #afafaf;
+    --nav-list-color: #f7f7f7;
 
     --nav-second-list-color: #bbbba7;
 
@@ -83,11 +83,8 @@
 * {
     user-select: none;
     box-sizing: border-box;
-
     padding: 0;
-
     margin: 0;
-
 }
 
 
@@ -150,7 +147,6 @@ main {
     background-color: var(--header-color);
     box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
     z-index: var(--z-fixed);
-    margin-right: 10px;
 }
 
 
@@ -265,6 +261,10 @@ main {
 
 @media screen and (max-width: 1118px) {
 
+    .header {
+        padding-left: 15px;
+    }
+
     .nav__menu {
 
         position: absolute;
@@ -275,7 +275,7 @@ main {
 
         width: 100%;
 
-        height: calc(100vh - 3.5rem);
+        height: calc(100vh - var(--header-height));
 
         overflow: auto;
 
@@ -349,7 +349,7 @@ main {
 
 .nav__link {
 
-    color: var(--black-color);
+    color: #032135;
 
     background-color: var(--header-color);
 
