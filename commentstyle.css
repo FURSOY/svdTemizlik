@@ -65,32 +65,23 @@
     cursor: pointer;
 }
 
-
-
 body.no-scroll {
     overflow: hidden;
-    /* Sayfa kaydırmayı engeller */
 }
 
 .modal {
     display: none;
-    /* Varsayılan olarak gizli */
+    /* Modal başlangıçta gizli olacak */
     position: fixed;
-    /* Ekranı sabitler */
     z-index: 1000;
-    /* Diğer her şeyin üzerinde görünür */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    /* Modal içeriğinin kendi içinde kaydırmasını engeller */
     background-color: rgba(0, 0, 0, 0.8);
-    /* Yarı şeffaf siyah arka plan */
 
-    /* İçeriği (resim ve butonları) ortalamak için Flexbox */
-    display: flex;
-    /* JavaScript ile 'flex' olarak ayarlandığında aktif olur */
+    /* justify-content ve align-items, modal display:flex olduğunda geçerli olur */
     justify-content: center;
     align-items: center;
 }
@@ -98,18 +89,13 @@ body.no-scroll {
 .modal-content {
     margin: auto;
     display: block;
-    /* Blok element olarak göster */
     max-width: 90%;
-    /* Maksimum genişlik */
     max-height: 90%;
-    /* Maksimum yükseklik */
     object-fit: contain;
-    /* Resmin oranlarını korurken tamamen görünmesini sağlar */
 }
 
 .close {
     position: absolute;
-    /* Modala göre konumlanır */
     top: 20px;
     right: 35px;
     color: #f1f1f1;
@@ -126,19 +112,14 @@ body.no-scroll {
     cursor: pointer;
 }
 
-/* --- İleri/Geri Butonları --- */
 .prev,
 .next {
     cursor: pointer;
     position: absolute;
-    /* Modala göre konumlanır */
     top: 50%;
-    /* Dikeyde ortaya hizala */
     transform: translateY(-50%);
-    /* Kendi yüksekliğinin yarısı kadar yukarı kaydırarak tam ortaya al */
     width: auto;
     padding: 16px;
-    /* margin-top: -50px; bu satırı kaldırın veya açıklama satırı yapın, 'transform' bunu yönetir */
     color: white;
     font-weight: bold;
     font-size: 20px;
@@ -146,25 +127,18 @@ body.no-scroll {
     user-select: none;
     -webkit-user-select: none;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Hafif bir arka plan */
 }
 
-/* Konumlandırma */
 .next {
     right: 0;
-    /* Sağa yasla */
     border-radius: 3px 0 0 3px;
-    /* Sadece sol tarafını yuvarla */
 }
 
 .prev {
     left: 0;
-    /* Sola yasla */
     border-radius: 0 3px 3px 0;
-    /* Sadece sağ tarafını yuvarla */
 }
 
-/* Hover efekti */
 .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
