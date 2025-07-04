@@ -1,37 +1,31 @@
-// loadComments.js
 document.addEventListener('DOMContentLoaded', () => {
     const commentGrid = document.getElementById('commentGrid');
 
-    // Burada gerçek bir CMS'ten veri çekme mantığı olacak.
-    // Şimdilik sadece örnek olarak göstereceğim.
-    // Gerçekte Netlify CMS için API veya önceden oluşturulmuş JSON dosyalarını kullanırız.
-
-    // Varsayımsal olarak yorum verileriniz bir JSON dosyasından geliyor gibi düşünelim.
-    // Netlify CMS, bu dosyayı sizin için oluşturacak.
-    fetch('/admin/data/comments.json') // Netlify CMS, bu tür bir JSON dosyası oluşturabilir
-        .then(response => response.json())
+    // /data/comments.json dosyasını okuyun
+    fetch('/data/comments.json') // BURAYI DİKKATlice kontrol edin!
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
         .then(comments => {
+            // Yorumlar yüklendikten sonra modal işlevselliğini başlatın
+            // (Önceki modal JavaScript kodunuzu buraya entegre edeceğiz)
             comments.forEach(comment => {
                 const gridItem = document.createElement('div');
                 gridItem.className = 'Commentgrid-item';
 
                 const img = document.createElement('img');
                 img.className = 'Commentgrid-item-img';
-                img.src = comment.image; // CMS'ten gelen resim yolu
-                img.alt = comment.altText; // CMS'ten gelen alt metin
+                // Resim yolu, config.yml'deki public_folder ayarınızla eşleşmeli
+                img.src = comment.image;
+                img.alt = comment.altText;
 
                 gridItem.appendChild(img);
-                // Eğer yorum metni de varsa, buraya ekleyebilirsiniz:
-                // const p = document.createElement('p');
-                // p.textContent = comment.text;
-                // gridItem.appendChild(p);
-
                 commentGrid.appendChild(gridItem);
             });
-
-            // Resimler yüklendikten sonra modal işlevselliğini başlatın
-            // (Önceki modal JavaScript kodunuzu buraya entegre edeceğiz)
-            initializeModal();
+            initializeModal(); // Resimler DOM'a eklendikten sonra modalı başlat
         })
         .catch(error => console.error('Yorumlar yüklenirken hata oluştu:', error));
 });
