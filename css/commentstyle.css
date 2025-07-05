@@ -1,9 +1,13 @@
+.commentMain {
+    padding-top: 20px;
+}
+
 .Comment.Title {
     display: inline-flex;
     align-items: center;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    width: 410px;
+    width: 550px;
     height: 50px;
     background: #52d8f4;
     color: white;
@@ -28,6 +32,19 @@
 }
 
 @media (max-width: 992px) {
+    .Comment.Title {
+        display: inline-flex;
+        align-items: center;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        width: 375px;
+        height: 50px;
+        background: #52d8f4;
+        color: white;
+        padding-left: 20px;
+        font-size: 11px;
+    }
+
     .CommentBox {
         grid-template-columns: repeat(3, 1fr);
     }
