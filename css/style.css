@@ -9,7 +9,7 @@
 :root {
 
     --header-height: 3.8rem;
-    --footer-height: 3.5rem;
+    --footer-height: 56px;
 
 
 
@@ -126,7 +126,6 @@ a {
 
 
 main {
-    padding-top: 20px;
     margin-top: var(--header-height);
     width: 100%;
     min-height: calc(100vh - (var(--header-height) + var(--footer-height)));
@@ -192,7 +191,7 @@ footer {
 
 
 
-.nav__logo,
+.logo,
 
 .nav__burger,
 
@@ -227,11 +226,7 @@ footer {
     column-gap: .25rem;
 
     font-weight: var(--font-semi-bold);
-
-    /* Color highlighting when pressed on mobile devices */
-
-    /*-webkit-tap-highlight-color: transparent;*/
-
+    height: 100%;
 }
 
 
@@ -292,8 +287,16 @@ footer {
 
 @media screen and (max-width: 1118px) {
 
-    .footerNumberBox {
+    .Marka {
+        font-size: 10px;
+    }
+
+    .footerImg {
         display: none;
+    }
+
+    .footerNumberBox {
+        font-size: 11px;
     }
 
     .header {
@@ -565,6 +568,10 @@ footer {
 /* For large devices */
 
 @media screen and (min-width: 1118px) {
+
+    .header {
+        padding-left: 25px;
+    }
 
     .container {
 

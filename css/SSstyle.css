@@ -1,0 +1,101 @@
+@media screen and (max-width: 1118px) {
+    .SSSmain {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .SSS.Title {
+        display: inline-flex;
+        align-items: center;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        width: 390px;
+        height: 50px;
+        background: #52d8f4;
+        color: white;
+        padding-left: 8px;
+        font-size: 10px;
+    }
+
+    .QuestionContainer {
+        display: grid;
+        flex: 1;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .Question {
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .Question h4 {
+        color: white;
+        font-size: 23px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .Question p {
+        color: white;
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1118px) {
+    .SSSmain {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .SSS.Title {
+        display: inline-flex;
+        align-items: center;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        width: 700px;
+        height: 60px;
+        background: #52d8f4;
+        color: white;
+        padding-left: 20px;
+    }
+
+    .QuestionContainer {
+        display: grid;
+        flex: 1;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .Question {
+        background-color: rgba(255, 255, 255, 0.1);
+        /* saydam beyaz */
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .Question h4 {
+        color: white;
+        font-size: 23px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .Question p {
+        color: white;
+        font-size: 18px;
+    }
+}
