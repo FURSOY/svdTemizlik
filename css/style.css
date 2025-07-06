@@ -293,11 +293,11 @@ footer {
     }
 
     .footerImg {
-        display: none;
+        display: block;
     }
 
     .footerNumberBox {
-        font-size: 11px;
+        display: none;
     }
 
     .header {
