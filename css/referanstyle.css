@@ -1,0 +1,39 @@
+.ReferansMain {
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 1118px) {
+    .Referans.Title {
+        display: inline-flex;
+        align-items: center;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        width: 360px;
+        height: 50px;
+        background: #52d8f4;
+        color: white;
+        padding-left: 8px;
+        font-size: 12px;
+    }
+
+    .miniTitle {
+        margin-top: 10px;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .RefList {
+        color: white;
+        margin-left: 10px;
+        margin-right: 10px;
+        list-style: disc;
+        padding-left: 20px;
+    }
+
+    .RefList li {
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
+}

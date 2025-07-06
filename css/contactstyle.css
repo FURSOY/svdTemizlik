@@ -4,6 +4,7 @@
     }
 
     .MainTitle {
+        margin-top: 20px;
         color: white;
         margin-bottom: 20px;
         text-align: center;
@@ -19,19 +20,15 @@
         background: #52d8f4;
         color: white;
         padding-left: 20px;
+        margin-bottom: 10px;
     }
 
-    .AdresText {
-        margin-top: 10px;
-        margin-left: 10px;
+    .Contlist {
         color: white;
-        font-size: 13px;
-        font-weight: 700;
-        line-height: 25px;
-    }
-
-    ion-icon {
-        margin-right: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        list-style: disc;
+        padding-left: 20px;
     }
 
     .map {
