@@ -1,0 +1,78 @@
+@media screen and (min-width: 1118px) {
+    .ServicesMain {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .MainTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        background: #52d8f4;
+        width: 100%;
+        height: 80px;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .ContentBox {
+        display: flex;
+        flex: 1;
+    }
+
+    .TextBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        flex: 1;
+        background: white;
+        border-radius: 30px;
+        margin: 10px;
+        padding: 25px;
+    }
+
+    .Title {
+        font-size: 1.3rem;
+        text-align: center;
+        font-weight: bold;
+        color: black;
+        margin-bottom: 0.8rem;
+    }
+
+    .SecondText {
+        font-size: 1rem;
+        line-height: 25px;
+        text-indent: 50px;
+        margin-bottom: 10px;
+    }
+
+    .List {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .ImageBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        background: white;
+        border-radius: 30px;
+        margin: 10px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .ImageBox img {
+        width: 100%;
+        border-radius: 15px;
+    }
+}
+
+@media screen and (max-width: 1118px) {}
