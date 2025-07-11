@@ -404,7 +404,12 @@ footer {
 
 }
 
-
+.nav__list,
+.nav__link,
+.dropdown__link,
+.dropdown__menu {
+    -webkit-tap-highlight-color: transparent;
+}
 
 .nav__link:active {
 
