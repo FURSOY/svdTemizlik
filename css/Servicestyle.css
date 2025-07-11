@@ -185,6 +185,7 @@
         font-size: 14px;
         text-indent: 25px;
         margin-bottom: 10px;
+        font-weight: 750;
     }
 
     .List {
@@ -194,6 +195,7 @@
     }
 
     .List li {
+        font-weight: 750;
         color: white;
         font-size: 13px;
     }
