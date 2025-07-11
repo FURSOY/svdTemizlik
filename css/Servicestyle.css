@@ -159,7 +159,6 @@
         display: flex;
         flex: 1;
         flex-direction: column-reverse;
-        margin: 10px;
     }
 
     .TextBox {
@@ -168,35 +167,35 @@
         align-items: center;
         width: 100%;
         flex: 1;
-        background: white;
-        border-radius: 30px;
+        /* background-color: rgba(255, 255, 255, 0.1); */
         padding: 25px;
         height: 700px;
     }
 
     .Title {
-        font-size: 15px;
+        font-size: 17px;
         text-align: center;
         font-weight: bold;
-        color: black;
+        color: white;
         margin-bottom: 0.8rem;
     }
 
     .SecondText {
-        font-size: 10px;
-        line-height: 15px;
-        text-indent: 50px;
+        color: white;
+        font-size: 14px;
+        text-indent: 25px;
         margin-bottom: 10px;
     }
 
     .List {
         width: 100%;
         margin-bottom: 10px;
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .List li {
-        font-size: 10px;
+        color: white;
+        font-size: 13px;
     }
 
     /* Resim/Video Slider Konteyneri */
