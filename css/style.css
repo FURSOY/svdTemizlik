@@ -203,27 +203,18 @@ footer {
 
 
 .nav__data {
-
     height: 100%;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
 }
 
 
 
 .nav__logo {
-
     display: inline-flex;
-
     align-items: center;
-
     column-gap: .25rem;
-
     font-weight: var(--font-semi-bold);
     height: 100%;
 }
@@ -231,13 +222,9 @@ footer {
 
 
 .nav__logo img {
-
     font-weight: initial;
-
     font-size: 1.25rem;
-
     height: 45px;
-
 }
 
 
@@ -303,25 +290,15 @@ footer {
     }
 
     .nav__menu {
-
         position: absolute;
-
         left: 0;
-
         top: 2.5rem;
-
         width: 100%;
-
         /* height: calc(100vh - var(--header-height)); */
-
         overflow: auto;
-
         pointer-events: none;
-
         opacity: 0;
-
         transition: top .4s, opacity .3s;
-
     }
 
 

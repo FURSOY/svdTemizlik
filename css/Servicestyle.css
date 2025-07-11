@@ -23,6 +23,7 @@
     .ContentBox {
         display: flex;
         flex: 1;
+        justify-content: center;
         /* Bu konteynerin içindeki elemanların yüksekliğini hizalamak için align-items: stretch; varsayılan olacaktır */
     }
 
@@ -32,40 +33,40 @@
         align-items: center;
         width: 50%;
         flex: 1;
-        background: white;
-        border-radius: 30px;
-        margin: 10px;
         padding: 25px;
         /* Metin kutusunun yüksekliğini sabitleyelim. Bu, slider'ın da aynı yüksekliğe sahip olmasını sağlar. */
-        height: 400px;
+        height: 410px;
         /* Bu değeri, hem metnin rahatça sığdığı hem de görselin ideal göründüğü bir değer olarak belirleyin */
-        overflow-y: auto;
+        overflow-y: visible;
         /* İçerik taşarsa kaydırma çubuğu çıksın */
+        background-color: rgba(255, 255, 255, 0.1);
     }
 
     .Title {
-        font-size: 1.4vw;
+        font-size: 20px;
         text-align: center;
         font-weight: bold;
-        color: black;
+        color: white;
         margin-bottom: 0.8rem;
     }
 
     .SecondText {
-        font-size: 1.2vw;
-        line-height: 25px;
-        text-indent: 50px;
+        text-align: justify;
+        font-size: 17px;
         margin-bottom: 10px;
+        width: 100%;
+        color: white;
     }
 
     .List {
         width: 100%;
         margin-bottom: 10px;
-        font-size: 1.2vw;
+        font-size: 17px;
     }
 
     .List li {
-        font-size: 1.2vw;
+        font-size: 17px;
+        color: white;
     }
 
     /* Resim/Video Slider Konteyneri */
@@ -73,23 +74,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
         flex: 1;
-        /* Soldaki .TextBox ile genişliği paylaşsın */
-        background: white;
-        border-radius: 30px;
-        /* Slider'ın yüksekliğini de metin kutusuyla aynı sabit değere ayarlıyoruz */
-        height: 400px;
+        padding: 10px;
+        height: 410px;
         /* .TextBox ile aynı değerde olmalı */
     }
 
     .image-display-box {
         position: relative;
-        width: 100%;
         /* image-slider-wrapper'ın genişliğini kapla */
         height: 100%;
         /* image-slider-wrapper'ın yüksekliğini kapla */
-        background-color: white;
         border-radius: 30px;
         overflow: hidden;
         /* Taşmayı engelle */
@@ -103,9 +99,7 @@
     .image-display-box img,
     .image-display-box video {
         display: block;
-        /* Margin auto için block elementi olmalı */
         max-width: 100%;
-        /* Kapsayıcının genişliğini geçmesin */
         max-height: 100%;
         object-fit: contain;
         /* En-boy oranını koruyarak kutuya sığdırır, boşluk kalabilir */
@@ -130,6 +124,16 @@
 
     .nav-button:hover {
         background-color: #52d8f4;
+    }
+
+    .Information {
+        width: 100%;
+        display: flex;
+        color: white;
+        font-size: 18px;
+        line-height: 25px;
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -267,14 +271,14 @@
     .nav-button:hover {
         background-color: #52d8f4;
     }
-}
 
-.Information {
-    width: 100%;
-    display: flex;
-    color: white;
-    font-size: 13px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    line-height: 15px;
+    .Information {
+        width: 100%;
+        display: flex;
+        color: white;
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        line-height: 15px;
+    }
 }
