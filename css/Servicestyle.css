@@ -187,9 +187,9 @@
     }
 
     .SecondText {
+        text-align: justify;
         color: white;
         font-size: 14px;
-        text-indent: 25px;
         margin-bottom: 10px;
         font-weight: 750;
     }
