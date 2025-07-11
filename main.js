@@ -10,6 +10,15 @@ const showMenu = (toggleId, navId) => {
         // Add show-icon to show and hide the menu icon
         toggle.classList.toggle('show-icon')
     })
+
+    // Yeni eklenen kısım: Boşluğa tıklanınca menüyü kapat
+    document.addEventListener('click', (event) => {
+        // Eğer menü açıksa (show-menu sınıfı varsa) VE tıklanan alan menünün veya toggle butonunun içinde değilse
+        if (nav.classList.contains('show-menu') && !nav.contains(event.target) && !toggle.contains(event.target)) {
+            nav.classList.remove('show-menu');
+            toggle.classList.remove('show-icon');
+        }
+    });
 }
 
 showMenu('nav-toggle', 'nav-menu')
@@ -17,31 +26,24 @@ showMenu('nav-toggle', 'nav-menu')
 /*=============== DROPDOWN MENU INTERACTION FOR MOBILE ===============*/
 document.addEventListener('DOMContentLoaded', () => {
     const dropdownItems = document.querySelectorAll('.dropdown__item');
-    // dropdownSubitems artık gerekmiyor, çünkü "Reports" kaldırıldı.
-    // const dropdownSubitems = document.querySelectorAll('.dropdown__subitem'); 
 
-    // Pencere genişliğini kontrol eden yardımcı fonksiyon
     const isMobile = () => window.innerWidth <= 1118; // CSS medya sorgunuzla aynı kırılım noktası
 
-    // Ana dropdown menüleri için olay dinleyicisi
     dropdownItems.forEach(item => {
-        const dropdownLink = item.querySelector('.nav__link'); // Analytics gibi başlık
+        const dropdownLink = item.querySelector('.nav__link');
         const dropdownMenu = item.querySelector('.dropdown__menu');
 
         if (dropdownLink) {
             dropdownLink.addEventListener('click', (event) => {
-                // Sadece mobil cihazlarda çalışmasını sağla
                 if (isMobile()) {
-                    event.preventDefault(); // Varsayılan bağlantı davranışını engelle (varsa)
+                    event.preventDefault();
 
-                    // Tıklanan öğe zaten açıksa kapat
                     if (item.classList.contains('show-dropdown')) {
                         item.classList.remove('show-dropdown');
                         if (dropdownMenu) {
                             dropdownMenu.style.maxHeight = '0';
                         }
                     } else {
-                        // Diğer tüm ana dropdownları kapat
                         dropdownItems.forEach(dItem => {
                             if (dItem !== item) {
                                 dItem.classList.remove('show-dropdown');
@@ -52,14 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
                             }
                         });
 
-                        // Tıklanan dropdown'ı aç
                         item.classList.add('show-dropdown');
                         if (dropdownMenu) {
-                            // Menüyü açmadan önce display özelliğini geçici olarak ayarla
                             dropdownMenu.style.maxHeight = 'fit-content';
                             const scrollHeight = dropdownMenu.scrollHeight;
-                            dropdownMenu.style.maxHeight = '0'; // Tekrar sıfırla
-                            // Küçük bir gecikme ile (reflow için) max-height'ı ayarla
+                            dropdownMenu.style.maxHeight = '0';
                             requestAnimationFrame(() => {
                                 dropdownMenu.style.maxHeight = scrollHeight + 'px';
                             });
@@ -69,8 +68,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    // Bu kısım artık ana `showMenu` fonksiyonunun içinde genel menü kapanışı için ele alınıyor,
+    // ama dropdownları kapatma mantığı burada kalsın.
     document.addEventListener('click', (event) => {
-        if (isMobile() && !event.target.closest('.nav__menu')) {
+        if (isMobile() && !event.target.closest('.dropdown__item') && !event.target.closest('.nav__toggle')) { // `.nav__toggle` ekledim
             dropdownItems.forEach(item => {
                 item.classList.remove('show-dropdown');
                 const dropdownMenu = item.querySelector('.dropdown__menu');
@@ -81,16 +83,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Pencere yeniden boyutlandırıldığında (mobil'den PC'ye veya tersi) menüleri sıfırla
+
     window.addEventListener('resize', () => {
-        if (!isMobile()) { // PC moduna geçildiğinde
+        if (!isMobile()) {
             dropdownItems.forEach(item => {
-                item.classList.remove('show-dropdown'); // Mobil sınıflarını kaldır
+                item.classList.remove('show-dropdown');
                 const dropdownMenu = item.querySelector('.dropdown__menu');
                 if (dropdownMenu) {
-                    dropdownMenu.style.maxHeight = ''; // CSS'in kontrolüne bırak
+                    dropdownMenu.style.maxHeight = '';
                 }
             });
+            // Geniş ekrana geçildiğinde ana menüyü de kapat (açık kalmışsa)
+            const nav = document.getElementById('nav-menu');
+            const toggle = document.getElementById('nav-toggle');
+            if (nav.classList.contains('show-menu')) {
+                nav.classList.remove('show-menu');
+                toggle.classList.remove('show-icon');
+            }
         }
     });
 });
