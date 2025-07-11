@@ -1,0 +1,136 @@
+@media screen and (min-width: 1200px) {
+    .AboutMain {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .About.Title {
+        display: inline-flex;
+        align-items: center;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        width: 360px;
+        height: 50px;
+        background: #52d8f4;
+        color: white;
+        padding-left: 8px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .Cont {
+        display: flex;
+        flex: 1;
+    }
+
+    .ImageCont {
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .ImageCont img {
+        max-height: 450px;
+        border: 10px solid white;
+    }
+
+    .TextCont {
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        flex: 1;
+        padding-right: 50px;
+    }
+
+    .Title {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        font-size: 25px;
+        font-weight: 1000;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .List {}
+
+    .SecondText {
+        list-style: disc;
+        margin-bottom: 15px;
+        color: white;
+        font-size: 20px;
+        line-height: 25px;
+        text-align: justify;
+    }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .AboutMain {
+        padding-top: 20px;
+    }
+
+    .About.Title {
+        display: inline-flex;
+        align-items: center;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        width: 360px;
+        height: 50px;
+        background: #52d8f4;
+        color: white;
+        padding-left: 8px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .Cont {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .ImageCont {
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+    }
+
+    .ImageCont img {
+        max-height: 450px;
+        border: 10px solid white;
+    }
+
+    .TextCont {
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.1);
+        flex: 1;
+        padding-left: 50px;
+    }
+
+    .Title {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        font-size: 22px;
+        font-weight: 1000;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .List {}
+
+    .SecondText {
+        list-style: disc;
+        margin-bottom: 15px;
+        color: white;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: left;
+        text-spacing-trim: 10;
+    }
+}
