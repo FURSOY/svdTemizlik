@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'videos/video1.mp4',
         'videos/video2.mp4',
         'videos/video3.mp4',
+        'videos/video28.mp4',
     ];
 
     let currentVideoIndex = 0;
