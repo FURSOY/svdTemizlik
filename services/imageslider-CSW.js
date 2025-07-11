@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'video', src: '/videos/video10.mp4' },
         { type: 'image', src: '/img/CSW1.jpg' },
         { type: 'video', src: '/videos/video11.mp4' },
-
         { type: 'video', src: '/videos/video13.mp4' },
         { type: 'image', src: '/img/CSW2.jpg' },
         { type: 'video', src: '/videos/video14.mp4' },

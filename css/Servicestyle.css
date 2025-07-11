@@ -220,7 +220,6 @@
         /* image-slider-wrapper'ın genişliğini kapla */
         height: 100%;
         /* image-slider-wrapper'ın yüksekliğini kapla */
-        background-color: white;
         border-radius: 30px;
         overflow: hidden;
         /* Taşmayı engelle */
