@@ -23,6 +23,7 @@
     .ContentBox {
         display: flex;
         flex: 1;
+        /* Bu konteynerin içindeki elemanların yüksekliğini hizalamak için align-items: stretch; varsayılan olacaktır */
     }
 
     .TextBox {
@@ -35,10 +36,15 @@
         border-radius: 30px;
         margin: 10px;
         padding: 25px;
+        /* Metin kutusunun yüksekliğini sabitleyelim. Bu, slider'ın da aynı yüksekliğe sahip olmasını sağlar. */
+        height: 400px;
+        /* Bu değeri, hem metnin rahatça sığdığı hem de görselin ideal göründüğü bir değer olarak belirleyin */
+        overflow-y: auto;
+        /* İçerik taşarsa kaydırma çubuğu çıksın */
     }
 
     .Title {
-        font-size: 1.3rem;
+        font-size: 1.4vw;
         text-align: center;
         font-weight: bold;
         color: black;
@@ -46,7 +52,7 @@
     }
 
     .SecondText {
-        font-size: 1rem;
+        font-size: 1.2vw;
         line-height: 25px;
         text-indent: 50px;
         margin-bottom: 10px;
@@ -55,24 +61,204 @@
     .List {
         width: 100%;
         margin-bottom: 10px;
+        font-size: 1.2vw;
     }
 
-    .ImageBox {
+    .List li {
+        font-size: 1.2vw;
+    }
+
+    /* Resim/Video Slider Konteyneri */
+    .image-slider-wrapper {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+        margin: 10px;
         flex: 1;
+        /* Soldaki .TextBox ile genişliği paylaşsın */
         background: white;
         border-radius: 30px;
-        margin: 10px;
-        padding-left: 50px;
-        padding-right: 50px;
+        /* Slider'ın yüksekliğini de metin kutusuyla aynı sabit değere ayarlıyoruz */
+        height: 400px;
+        /* .TextBox ile aynı değerde olmalı */
     }
 
-    .ImageBox img {
+    .image-display-box {
+        position: relative;
         width: 100%;
+        /* image-slider-wrapper'ın genişliğini kapla */
+        height: 100%;
+        /* image-slider-wrapper'ın yüksekliğini kapla */
+        background-color: white;
+        border-radius: 30px;
+        overflow: hidden;
+        /* Taşmayı engelle */
+        display: flex;
+        /* İçindeki medya öğesini ortalamak için */
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Görsel ve video elementlerinin stilleri */
+    .image-display-box img,
+    .image-display-box video {
+        display: block;
+        /* Margin auto için block elementi olmalı */
+        max-width: 100%;
+        /* Kapsayıcının genişliğini geçmesin */
+        max-height: 100%;
+        object-fit: contain;
+        /* En-boy oranını koruyarak kutuya sığdırır, boşluk kalabilir */
+        margin: auto;
+        /* Dikey ve yatayda ortala */
         border-radius: 15px;
+        /* HTML'deki mevcut border-radius */
+    }
+
+    .nav-button {
+        background-color: rgba(82, 216, 244, 0.7);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 24px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        margin: 0 5px;
+        flex-shrink: 0;
+    }
+
+    .nav-button:hover {
+        background-color: #52d8f4;
     }
 }
 
-@media screen and (max-width: 1118px) {}
+@media screen and (max-width: 1118px) {
+    .ServicesMain {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .MainTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        background: #52d8f4;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        font-size: 21px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .ContentBox {
+        display: flex;
+        flex: 1;
+        flex-direction: column-reverse;
+        margin: 10px;
+    }
+
+    .TextBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        flex: 1;
+        background: white;
+        border-radius: 30px;
+        padding: 25px;
+        height: 700px;
+    }
+
+    .Title {
+        font-size: 15px;
+        text-align: center;
+        font-weight: bold;
+        color: black;
+        margin-bottom: 0.8rem;
+    }
+
+    .SecondText {
+        font-size: 10px;
+        line-height: 15px;
+        text-indent: 50px;
+        margin-bottom: 10px;
+    }
+
+    .List {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+
+    .List li {
+        font-size: 10px;
+    }
+
+    /* Resim/Video Slider Konteyneri */
+    .image-slider-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        flex: 1;
+        /* Soldaki .TextBox ile genişliği paylaşsın */
+        border-radius: 30px;
+        /* Slider'ın yüksekliğini de metin kutusuyla aynı sabit değere ayarlıyoruz */
+        height: 400px;
+        /* .TextBox ile aynı değerde olmalı */
+    }
+
+    .image-display-box {
+        position: relative;
+        width: 100%;
+        /* image-slider-wrapper'ın genişliğini kapla */
+        height: 100%;
+        /* image-slider-wrapper'ın yüksekliğini kapla */
+        background-color: white;
+        border-radius: 30px;
+        overflow: hidden;
+        /* Taşmayı engelle */
+        display: flex;
+        /* İçindeki medya öğesini ortalamak için */
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Görsel ve video elementlerinin stilleri */
+    .image-display-box img,
+    .image-display-box video {
+        display: block;
+        /* Margin auto için block elementi olmalı */
+        max-width: 100%;
+        /* Kapsayıcının genişliğini geçmesin */
+        max-height: 100%;
+        object-fit: contain;
+        /* En-boy oranını koruyarak kutuya sığdırır, boşluk kalabilir */
+        margin: auto;
+        /* Dikey ve yatayda ortala */
+        border-radius: 15px;
+        /* HTML'deki mevcut border-radius */
+    }
+
+    .nav-button {
+        background-color: rgba(82, 216, 244, 0.7);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 24px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        margin: 0 5px;
+        flex-shrink: 0;
+    }
+
+    .nav-button:hover {
+        background-color: #52d8f4;
+    }
+}

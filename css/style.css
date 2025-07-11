@@ -67,7 +67,7 @@
 
 /*========== Responsive typography ==========*/
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
 
     :root {
 
@@ -284,7 +284,7 @@ footer {
 
 /* Navigation for mobile devices */
 
-@media screen and (max-width: 1118px) {
+@media screen and (max-width: 1200px) {
 
     .Marka {
         font-size: 10px;
@@ -566,7 +566,7 @@ footer {
 
 /* For large devices */
 
-@media screen and (min-width: 1118px) {
+@media screen and (min-width: 1200px) {
 
     .header {
         padding-left: 25px;

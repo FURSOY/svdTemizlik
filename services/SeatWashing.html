@@ -123,8 +123,16 @@
                     istiyorsanız bizimle
                     iletişime geçin.</p>
             </div>
-            <div class="ImageBox">
-                <img src="/img/SeatWashing.jpeg">
+            <div class="image-slider-wrapper">
+                <button class="nav-button prev-button">&#10094;</button>
+                <div class="image-display-box">
+                    <img id="mediaDisplay" src="/img/SeatWashing.jpeg" alt="Koltuk Takımı Yıkama">
+                    <video id="videoDisplay" controls muted loop style="display: none;">
+                        <source src="/video/CarSeatWashing.mp4" type="video/mp4">
+                        Tarayıcınız video etiketini desteklemiyor.
+                    </video>
+                </div>
+                <button class="nav-button next-button">&#10095;</button>
             </div>
         </div>
     </main>
@@ -139,6 +147,7 @@
     </footer>
 
     <script src="../main.js"></script>
+    <script src="imageslider-SW.js"></script>
 </body>
 
 </html>
