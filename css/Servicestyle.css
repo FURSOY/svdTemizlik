@@ -263,3 +263,13 @@
         background-color: #52d8f4;
     }
 }
+
+.Information {
+    width: 100%;
+    display: flex;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 15px;
+}
