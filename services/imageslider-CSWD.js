@@ -7,8 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Medya dosyalarınızın yolları ve tipleri.
     // Lütfen kendi dosya yollarınızı ve tiplerini buraya ekleyin.
     const mediaSources = [
+        { type: 'video', src: '/videos/video22.mp4' },
+        { type: 'video', src: '/videos/video21.mp4' },
         { type: 'video', src: '/videos/video17.mp4' },
         { type: 'image', src: '/img/CSWD1.jpg' },
+        { type: 'video', src: '/videos/video18.mp4' },
     ];
 
     let currentMediaIndex = 0;

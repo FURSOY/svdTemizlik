@@ -7,19 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Medya dosyalarınızın yolları ve tipleri.
     // Lütfen kendi dosya yollarınızı ve tiplerini buraya ekleyin.
     const mediaSources = [
-        { type: 'video', src: '/videos/video10.mp4' },
-        { type: 'image', src: '/img/CSW1.jpg' },
-        { type: 'video', src: '/videos/video11.mp4' },
-        { type: 'video', src: '/videos/video12.mp4' },
-        { type: 'video', src: '/videos/video13.mp4' },
-        { type: 'image', src: '/img/CSW2.jpg' },
-        { type: 'video', src: '/videos/video14.mp4' },
-        { type: 'video', src: '/videos/video15.mp4' },
-        { type: 'image', src: '/img/CSW4.jpg' },
-        { type: 'video', src: '/videos/video16.mp4' },
-        { type: 'image', src: '/img/CSW3.jpg' },
-
-        { type: 'video', src: '/videos/video20.mp4' },
+        { type: 'image', src: '/img/SW1.jpg' },
+        { type: 'video', src: '/videos/video8.mp4' },
+        { type: 'image', src: '/img/SW2.jpg' },
+        { type: 'video', src: '/videos/video5.mp4' },
+        { type: 'image', src: '/img/SW4.jpg' },
+        { type: 'video', src: '/videos/video7.mp4' },
+        { type: 'image', src: '/img/SW3.jpg' },
+        { type: 'video', src: '/videos/video6.mp4' },
     ];
 
     let currentMediaIndex = 0;
