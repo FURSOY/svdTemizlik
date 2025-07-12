@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'video', src: '/videos/video27.mp4' },
         { type: 'image', src: '/img/CW1.jpg' },
         { type: 'image', src: '/img/CW2.jpg' },
-        { type: 'video', src: '/videos/video6.mp4' },
     ];
 
     let currentMediaIndex = 0;

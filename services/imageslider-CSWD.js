@@ -12,6 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'video', src: '/videos/video17.mp4' },
         { type: 'image', src: '/img/CSWD1.jpg' },
         { type: 'video', src: '/videos/video18.mp4' },
+        { type: 'video', src: '/videos/video29.mp4' },
+        { type: 'video', src: '/videos/video30.mp4' },
+        { type: 'video', src: '/videos/video31.mp4' },
+        { type: 'video', src: '/videos/video32.mp4' },
+        { type: 'video', src: '/videos/video33.mp4' },
+        { type: 'image', src: '/img/CSWD2.jpg' },
     ];
 
     let currentMediaIndex = 0;
