@@ -79,7 +79,7 @@
     .MainTitle {
         color: white;
         margin-bottom: 20px;
-
+        margin-top: 20px;
     }
 
     .ContainarContact {
@@ -121,6 +121,15 @@
         background: #52d8f4;
         color: white;
         padding-left: 20px;
+    }
+
+    .Contlist {
+        color: white;
+        margin-left: 10px;
+        margin-right: 10px;
+        list-style: disc;
+        padding-left: 20px;
+        margin-top: 20px;
     }
 
     .AdresText {

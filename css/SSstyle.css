@@ -79,7 +79,6 @@
 
     .Question {
         background-color: rgba(255, 255, 255, 0.1);
-        /* saydam beyaz */
         backdrop-filter: blur(10px);
         border-radius: 10px;
         display: flex;

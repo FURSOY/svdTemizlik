@@ -24,7 +24,6 @@
         display: flex;
         flex: 1;
         justify-content: center;
-        /* Bu konteynerin içindeki elemanların yüksekliğini hizalamak için align-items: stretch; varsayılan olacaktır */
     }
 
     .TextBox {
