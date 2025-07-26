@@ -458,12 +458,11 @@
     }
 
     .NdnContainer {
-        margin-top: 30px;
+        margin-top: 15px;
         width: 100%;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        margin-bottom: 30px;
+        gap: 15px;
         padding: 15px;
         box-sizing: border-box;
         overflow: hidden;
