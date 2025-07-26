@@ -156,7 +156,7 @@
         font-size: 22px;
         /* Başlık boyutu */
         font-weight: 700;
-        color: #ffd700;
+        color: #52d8f4;
         /* Başlık rengi */
     }
 
@@ -486,7 +486,7 @@
         font-size: 20px;
         /* Mobil başlık boyutu */
         font-weight: 700;
-        color: #ffd700;
+        color: #52d8f4;
         /* Başlık rengini #ffd700 olarak düzelttim */
     }
 
@@ -537,7 +537,7 @@
     }
 
     .HizmetContainer {
-        padding: 20px;
+        padding: 70px;
         /* Mobil için padding'i azalttım */
         padding-top: 0;
         padding-bottom: 0;
