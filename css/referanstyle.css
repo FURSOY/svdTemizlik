@@ -57,12 +57,12 @@
         align-items: center;
         border-top-right-radius: 25px;
         border-bottom-right-radius: 25px;
-        width: 360px;
+        width: 380px;
         height: 50px;
         background: #52d8f4;
         color: white;
         padding-left: 8px;
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .miniTitle {
