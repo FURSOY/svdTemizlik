@@ -7,8 +7,14 @@
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/referanstyle.css">
+    <!-- CSS dosyalarını LCP/FCP için optimize edilmiş şekilde ekleyin -->
+    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/referanstyle.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/referanstyle.css">
+    </noscript>
+
     <meta name="description"
         content="Ankara'da kurumsal temizlik hizmetleri: SVD Temizlik ile ofis, kafe, restoran, araç filosu ve kamu kurumlarına profesyonel, güvenilir ve garantili temizlik çözümleri.">
     <meta name="keywords"

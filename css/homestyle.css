@@ -1,28 +1,33 @@
-/* --- Large Screens (Desktop First) --- */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width:1200px) {
+
+    .HizmetTitle,
+    .Title {
+        height: 100px;
+        font-weight: 700
+    }
+
     .HomeMain {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center
     }
 
     .TitleContainer {
         width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: column
     }
 
     .Title {
         position: relative;
         background: #165a8e;
-        color: white;
+        color: #fff;
         text-align: center;
-        height: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 35px;
-        font-weight: 700;
+        font-size: 30px;
+        /* Ana başlık (Title) font boyutu küçültüldü */
     }
 
     .Title div {
@@ -33,12 +38,12 @@
         text-align: end;
         display: flex;
         flex-direction: column;
-        align-items: end;
+        align-items: end
     }
 
     .Title div h2,
-    p {
-        font-size: 15px;
+    .Title div p {
+        font-size: 15px
     }
 
     .boxesss {
@@ -47,259 +52,234 @@
         display: block;
         width: min-content;
         padding: 5px 10px;
-        background: white;
-        color: #2b83c7;
+        background: #fff;
+        color: #2b83c7
     }
 
-    /* --- NdnContainer (Özellikler) Kısmı --- */
     .NdnContainer {
         margin-top: 30px;
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        /* 2 sütunlu sabit düzen */
         gap: 20px;
         margin-bottom: 30px;
         padding: 15px;
         box-sizing: border-box;
-        overflow: hidden;
-        /* Animasyonlar dışarı taşmasın diye */
+        overflow: hidden
     }
 
     .NdnCard {
         background-color: #2c3e50;
-        /* Koyu arka plan rengi */
-        color: white;
+        color: #fff;
         border-radius: 12px;
         padding: 25px;
         display: flex;
         align-items: flex-start;
         gap: 15px;
-        /* İkon ve içerik arası boşluk */
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        /* Daha belirgin gölge */
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        /* Hover efekti için geçiş */
+        box-shadow: 0 6px 15px rgba(0, 0, 0, .3);
+        transition: transform .3s, box-shadow .3s;
         opacity: 0;
-        /* Başlangıçta gizli */
-        animation-fill-mode: forwards;
-        /* Animasyon bitince son durumunda kalsın */
+        animation-fill-mode: forwards
     }
 
-    /* Animasyon başlangıç pozisyonları */
-    .NdnCard[data-animation="left"] {
-        transform: translateX(-100%);
-        /* Soldan gelecekler başlangıçta solda */
+    .HizmetCard,
+    .HizmetTitle,
+    .tintle {
+        background: #165a8e
     }
 
-    .NdnCard[data-animation="right"] {
-        transform: translateX(100%);
-        /* Sağdan gelecekler başlangıçta sağda */
+    .NdnCard[data-animation=left] {
+        transform: translateX(-100%)
     }
 
-    /* Animasyonların uygulanması */
+    .NdnCard[data-animation=right] {
+        transform: translateX(100%)
+    }
+
     .NdnCard:nth-child(odd) {
-        /* Tek sıralı kartlar (1, 3, 5...) */
-        animation: slideInLeft 0.8s ease-out forwards;
+        animation: .8s ease-out forwards slideInLeft
     }
 
-    .NdnCard:nth-child(even) {
-        /* Çift sıralı kartlar (2, 4, 6...) */
-        animation: slideInRight 0.8s ease-out forwards;
+    .NdnCard:nth-child(2n) {
+        animation: .8s ease-out forwards slideInRight
     }
 
-    /* Her kartın farklı bir gecikmeyle gelmesi için */
-    .NdnCard:nth-child(1) {
-        animation-delay: 0.1s;
+    .NdnCard:first-child {
+        animation-delay: .1s
     }
 
     .NdnCard:nth-child(2) {
-        animation-delay: 0.2s;
+        animation-delay: .2s
     }
 
     .NdnCard:nth-child(3) {
-        animation-delay: 0.3s;
+        animation-delay: .3s
     }
 
     .NdnCard:nth-child(4) {
-        animation-delay: 0.4s;
+        animation-delay: .4s
     }
 
     .NdnCard:nth-child(5) {
-        animation-delay: 0.5s;
+        animation-delay: .5s
     }
 
     .NdnCard:nth-child(6) {
-        animation-delay: 0.6s;
+        animation-delay: .6s
     }
 
-    /* NDNCARD BÜYÜME EFEKTİ */
     .NdnCard:hover {
         transform: scale(1.05) translateY(-8px);
-        /* Hafifçe büyü ve yukarı kaydır */
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
-        /* Daha büyük ve koyu gölge */
-        cursor: pointer;
-        /* İşaretçi değişsin */
+        box-shadow: 0 12px 25px rgba(0, 0, 0, .5);
+        cursor: pointer
     }
-
 
     .NdnIcon {
         font-size: 36px;
-        /* İkon boyutu */
-        flex-shrink: 0;
-        /* İkonun küçülmesini engelle */
+        flex-shrink: 0
     }
 
     .NdnContent h3 {
-        margin: 0 0 8px 0;
-        /* Başlık alt boşluğu */
+        margin: 0 0 8px;
         font-size: 22px;
-        /* Başlık boyutu */
         font-weight: 700;
-        color: #52d8f4;
-        /* Başlık rengi */
+        color: #52d8f4
     }
 
     .NdnContent p {
         margin: 0;
         font-size: 15px;
         line-height: 1.6;
-        color: #ecf0f1;
-        /* Açıklama metni rengi */
+        color: #ecf0f1
     }
 
-    /* Animasyon Keyframes */
     @keyframes slideInLeft {
         from {
             opacity: 0;
-            transform: translateX(-100%);
+            transform: translateX(-100%)
         }
 
         to {
             opacity: 1;
-            transform: translateX(0);
+            transform: translateX(0)
         }
     }
 
     @keyframes slideInRight {
         from {
             opacity: 0;
-            transform: translateX(100%);
+            transform: translateX(100%)
         }
 
         to {
             opacity: 1;
-            transform: translateX(0);
+            transform: translateX(0)
         }
     }
 
-    /* --- Hizmetler Kısmı --- */
     .HizmetTitle {
         margin-top: 20px;
-        background: #165a8e;
         width: 100%;
-        height: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: white;
-        font-size: 60px;
-        font-weight: 700;
+        color: #fff;
+        font-size: 40px;
+        /* HizmetTitle font boyutu büyütüldü */
     }
 
     .HizmetContainer {
-        padding: 50px;
-        padding-top: 0;
-        padding-bottom: 0;
+        padding: 0 50px;
         margin-top: 20px;
         justify-content: space-around;
         gap: 75px;
         width: 100%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        /* 4 sütunlu düzen */
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr)
     }
 
     .HizmetCard {
-        /* Class adını Hizmet yerine HizmetCard yaptım */
         aspect-ratio: 3/4;
-        background: #165a8e;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 5px;
-        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-        /* Hafif iç gölge */
-        transition: background 0.3s ease, transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
-        /* Tıklama animasyonu için geçişler */
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, .1);
+        transition: background .3s, transform .1s ease-in-out, box-shadow .1s ease-in-out
+    }
+
+    .HizmetBox,
+    .tintle {
+        align-items: center
     }
 
     .HizmetCard:hover {
         background: #2b83c7;
         transform: translateY(2px);
-        box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2)
     }
 
     .HizmetBox {
         width: 100%;
         height: 100%;
         display: flex;
-        align-items: center;
         justify-content: space-around;
         flex-direction: column;
         padding-left: 7px;
-        padding-right: 7px;
+        padding-right: 7px
+    }
+
+    .Contlist,
+    .tintle {
+        padding-left: 20px
     }
 
     .HizmetBox p {
-        color: white;
+        color: #fff;
         font-size: 28px;
         font-weight: 1000;
         text-align: center;
         border-radius: 10px;
         padding-top: 5px;
-        padding-bottom: 5px;
+        padding-bottom: 5px
     }
 
     .HizmetBox img {
         width: 100%;
         border-radius: 5px;
         object-fit: cover;
-        /* Resimlerin kutuya sığmasını sağlar */
-        height: 70%;
-        /* Metin için yer açmak adına resim yüksekliğini azalttım */
+        height: 70%
     }
 
-    /* --- İletişim Kısmı --- */
     .ContactContainer {
         width: 100%;
         display: flex;
         justify-content: space-between;
         padding-bottom: 50px;
-        padding-top: 25px;
+        padding-top: 25px
     }
 
     .AdresBox {
-        flex: 1;
+        flex: 1
     }
 
     .Contlist {
-        color: white;
-        margin-left: 10px;
-        margin-right: 10px;
+        color: #fff;
         list-style: disc;
-        padding-left: 20px;
-        margin-top: 20px;
         font-size: 18px;
-        margin-bottom: 20px;
+        margin: 20px 10px
+    }
+
+    .map,
+    .tintle {
+        margin-bottom: 20px
     }
 
     .ContactBox {
         flex: 1;
         display: flex;
-        flex-direction: column;
+        flex-direction: column
     }
 
     .map {
@@ -307,64 +287,69 @@
         margin-top: 20px;
         margin-left: 20px;
         border-radius: 15px;
-        margin-bottom: 20px;
-        max-width: 90%;
-        /* Haritanın taşmasını engelle */
+        max-width: 90%
+    }
+
+    .Information,
+    .tintle {
+        display: flex;
+        color: #fff;
+        font-weight: 700
     }
 
     .tintle {
-        background: #165a8e;
         border-bottom-right-radius: 35px;
         border-top-right-radius: 35px;
         width: 40%;
         height: 70px;
-        display: flex;
-        align-items: center;
-        padding-left: 20px;
-        font-size: 45px;
-        color: white;
-        font-weight: bold;
-        margin-bottom: 20px;
+        font-size: 30px
     }
 
     .Information {
         margin-left: 10px;
-        display: flex;
         align-items: center;
-        color: white;
         font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 10px;
+        margin-bottom: 10px
     }
 }
 
-/* --- Small Screens (Mobile First) --- */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width:1200px) {
+
+    .NdnCard,
+    .NdnCard[data-animation=left],
+    .NdnCard[data-animation=right] {
+        transform: translateX(-100%)
+    }
+
+    .Information,
+    .Title {
+        font-weight: 700;
+        text-align: left
+    }
+
     .HomeMain {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center
     }
 
     .TitleContainer {
         width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: column
     }
 
     .Title {
         position: relative;
         background: #165a8e;
-        color: white;
-        text-align: left;
-        /* Mobil'de sola hizala */
+        color: #fff;
         height: 80px;
         display: flex;
         justify-content: left;
         align-items: center;
-        font-size: 20px;
-        font-weight: 700;
-        padding-left: 10px;
+        font-size: 18px;
+        /* Ana başlık (Title) font boyutu küçültüldü */
+        padding-left: 10px
     }
 
     .Title div {
@@ -376,13 +361,12 @@
         display: flex;
         flex-direction: column;
         align-items: end;
-        /* Animasyonu sadece mobilde sağdan gelmesi için */
-        animation: slideInRight 1s ease-out;
+        animation: 1s ease-out slideInRight
     }
 
     .Title div h2,
-    p {
-        font-size: 10px;
+    .Title div p {
+        font-size: 10px
     }
 
     .boxesss {
@@ -391,305 +375,259 @@
         display: block;
         width: min-content;
         padding: 5px 10px;
-        background: white;
+        background: #fff;
         color: #2b83c7;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center
     }
 
-    /* ImageGridder (Büyük resim ızgarası - mobilde gizlendi) */
     .ImageGridder {
         width: 100%;
         display: none;
-        /* Mobilde tamamen gizle */
-        padding: 20px;
+        padding: 20px
     }
 
-    /* --- NdnContainer (Özellikler) Kısmı --- */
     .NdnContainer {
         margin-top: 15px;
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        /* Mobilde tek sütun */
         gap: 15px;
         padding: 15px;
         box-sizing: border-box;
-        overflow: hidden;
+        overflow: hidden
+    }
+
+    .HizmetTitle,
+    .NdnCard {
+        display: flex;
+        color: #fff
     }
 
     .NdnCard {
         background-color: #2c3e50;
-        color: white;
         border-radius: 12px;
         padding: 20px;
-        display: flex;
         align-items: flex-start;
         gap: 15px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, .3);
+        transition: transform .3s, box-shadow .3s;
         opacity: 0;
-        animation-fill-mode: forwards;
-        /* Mobilde tüm kartlar soldan gelsin */
-        animation: slideInLeft 0.8s ease-out forwards;
-        transform: translateX(-100%);
+        animation: .8s ease-out forwards slideInLeft
     }
 
-    /* Mobilde her kart için ayrı ayrı animasyon gecikmesi */
-    .NdnCard:nth-child(1) {
-        animation-delay: 0.1s;
+    .HizmetCard,
+    .HizmetTitle,
+    .tintle {
+        background: #165a8e
+    }
+
+    .NdnCard:first-child {
+        animation-delay: .1s
     }
 
     .NdnCard:nth-child(2) {
-        animation-delay: 0.2s;
+        animation-delay: .2s
     }
 
     .NdnCard:nth-child(3) {
-        animation-delay: 0.3s;
+        animation-delay: .3s
     }
 
     .NdnCard:nth-child(4) {
-        animation-delay: 0.4s;
+        animation-delay: .4s
     }
 
     .NdnCard:nth-child(5) {
-        animation-delay: 0.5s;
+        animation-delay: .5s
     }
 
     .NdnCard:nth-child(6) {
-        animation-delay: 0.6s;
+        animation-delay: .6s
     }
 
-    /* Mobilde sağdan veya soldan gelme data-animation niteliğini geçersiz kılmak için */
-    .NdnCard[data-animation="left"],
-    .NdnCard[data-animation="right"] {
-        transform: translateX(-100%);
-    }
-
-    /* NDNCARD BÜYÜME EFEKTİ */
     .NdnCard:hover {
         transform: scale(1.05) translateY(-8px);
-        /* Hafifçe büyü ve yukarı kaydır */
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
-        /* Daha büyük ve koyu gölge */
-        cursor: pointer;
-        /* İşaretçi değişsin */
+        box-shadow: 0 12px 25px rgba(0, 0, 0, .5);
+        cursor: pointer
+    }
+
+    .HizmetCard,
+    .HizmetCard:hover {
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, .1);
+        transition: background .3s, transform .1s ease-in-out, box-shadow .1s ease-in-out
     }
 
     .NdnIcon {
         font-size: 30px;
-        /* Mobil ikon boyutu */
-        flex-shrink: 0;
+        flex-shrink: 0
     }
 
     .NdnContent h3 {
-        margin: 0 0 8px 0;
+        margin: 0 0 8px;
         font-size: 20px;
-        /* Mobil başlık boyutu */
         font-weight: 700;
-        color: #52d8f4;
-        /* Başlık rengini #ffd700 olarak düzelttim */
+        color: #52d8f4
     }
 
     .NdnContent p {
         margin: 0;
         font-size: 15px;
         line-height: 1.6;
-        color: #ecf0f1;
+        color: #ecf0f1
     }
 
-    /* Animasyon Keyframes (Mobil için de geçerli) */
     @keyframes slideInLeft {
         from {
             opacity: 0;
-            transform: translateX(-100%);
+            transform: translateX(-100%)
         }
 
         to {
             opacity: 1;
-            transform: translateX(0);
+            transform: translateX(0)
         }
     }
 
     @keyframes slideInRight {
         from {
             opacity: 0;
-            transform: translateX(100%);
+            transform: translateX(100%)
         }
 
         to {
             opacity: 1;
-            transform: translateX(0);
+            transform: translateX(0)
         }
     }
 
-    /* --- Hizmetler Kısmı --- */
     .HizmetTitle {
         margin-top: 10px;
-        background: #165a8e;
         width: 100%;
         height: 60px;
-        display: flex;
         justify-content: center;
         align-items: center;
-        color: white;
-        font-size: 30px;
-        font-weight: 700;
+        font-size: 60px;
+        /* HizmetTitle font boyutu büyütüldü */
+        font-weight: 700
     }
 
     .HizmetContainer {
-        padding: 70px;
-        /* Mobil için padding'i azalttım */
-        padding-top: 0;
-        padding-bottom: 0;
+        padding: 0 70px;
         margin-top: 20px;
         justify-content: space-around;
         gap: 25px;
-        /* Mobil için boşluğu azalttım */
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        /* Mobilde tek sütun */
+        grid-template-columns: repeat(1, 1fr)
     }
 
     .HizmetCard {
-        /* Class adını Hizmet yerine HizmetCard yaptım */
         aspect-ratio: 3/4;
-        background: #165a8e;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 5px;
-        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-        /* Hafif iç gölge */
-        transition: background 0.3s ease, transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
-        /* Tıklama animasyonu için geçişler */
+        border-radius: 5px
+    }
+
+    .HizmetBox,
+    .tintle {
+        align-items: center
     }
 
     .HizmetCard:hover {
-        background: #2b83c7;
-        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-        /* Hafif iç gölge */
-        transition: background 0.3s ease, transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
-        /* Tıklama animasyonu için geçişler */
+        background: #2b83c7
     }
 
     .HizmetBox {
         width: 100%;
         height: 100%;
         display: flex;
-        align-items: center;
         justify-content: space-around;
         flex-direction: column;
         padding-left: 7px;
-        padding-right: 7px;
+        padding-right: 7px
+    }
+
+    .Contlist,
+    .tintle {
+        padding-left: 20px;
+        color: #fff
     }
 
     .HizmetBox p {
-        color: white;
+        color: #fff;
         font-size: 24px;
-        /* Mobil yazı boyutunu düşürdüm */
         font-weight: 1000;
         text-align: center;
         border-radius: 10px;
         padding-top: 5px;
-        padding-bottom: 5px;
+        padding-bottom: 5px
     }
 
     .HizmetBox img {
         width: 100%;
         border-radius: 5px;
         object-fit: cover;
-        height: 70%;
+        height: 70%
     }
 
-    /* --- İletişim Kısmı --- */
     .ContactContainer {
         width: 100%;
         display: flex;
         flex-direction: column;
-        /* Mobil'de dikey hizala */
         padding-bottom: 30px;
-        /* Mobil için padding'i azalttım */
         padding-top: 20px;
-        /* Mobil için padding'i azalttım */
-        align-items: center;
-        /* Ortala */
+        align-items: center
     }
 
     .AdresBox {
         width: 100%;
-        /* Mobil'de tam genişlik */
-        margin-bottom: 20px;
+        margin-bottom: 20px
     }
 
     .Contlist {
-        color: white;
-        margin-left: 10px;
-        margin-right: 10px;
         list-style: disc;
-        padding-left: 20px;
-        margin-top: 15px;
         font-size: 16px;
-        /* Mobil font boyutunu düşürdüm */
-        margin-bottom: 15px;
+        margin: 15px 10px
     }
 
     .ContactBox {
         width: 100%;
-        /* Mobil'de tam genişlik */
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center
     }
 
     .map {
         display: block;
-        margin-top: 15px;
-        margin-left: auto;
-        /* Ortalamak için */
-        margin-right: auto;
-        /* Ortalamak için */
         border-radius: 15px;
-        margin-bottom: 15px;
+        margin: 15px auto;
         width: 90%;
-        /* Mobil'de genişliği ayarla */
-        height: 250px;
-        /* Mobil harita yüksekliğini ayarla */
+        height: 250px
     }
 
     .tintle {
-        background: #165a8e;
         border-bottom-right-radius: 35px;
         border-top-right-radius: 35px;
         width: 70%;
-        /* Mobil'de genişliği artır */
         height: 50px;
         display: flex;
-        align-items: center;
-        padding-left: 20px;
         font-size: 30px;
-        /* Mobil font boyutunu düşürdüm */
-        color: white;
-        font-weight: bold;
+        font-weight: 700;
         margin-bottom: 15px;
-        /* Mobil'de sola hizalı kalmalı */
-        align-self: flex-start;
+        align-self: flex-start
     }
 
     .Information {
         margin-left: 10px;
         display: flex;
         align-items: center;
-        color: white;
+        color: #fff;
         font-size: 16px;
-        /* Mobil font boyutunu düşürdüm */
-        font-weight: bold;
         margin-bottom: 8px;
-        text-align: left;
-        width: 90%;
-        /* Genişliği ayarla */
+        width: 90%
     }
 
     .ContactBoxs {
@@ -697,8 +635,6 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        /* İçerikleri sola hizala */
-        padding-left: 10px;
-        /* Sol boşluk ekle */
+        padding-left: 10px
     }
 }
