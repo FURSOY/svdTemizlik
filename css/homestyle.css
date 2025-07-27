@@ -21,7 +21,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 70px;
+        font-size: 35px;
         font-weight: 700;
     }
 
@@ -36,8 +36,9 @@
         align-items: end;
     }
 
-    .Title div p {
-        font-size: 20px;
+    .Title div h2,
+    p {
+        font-size: 15px;
     }
 
     .boxesss {
@@ -361,7 +362,7 @@
         display: flex;
         justify-content: left;
         align-items: center;
-        font-size: 35px;
+        font-size: 20px;
         font-weight: 700;
         padding-left: 10px;
     }
@@ -379,8 +380,9 @@
         animation: slideInRight 1s ease-out;
     }
 
-    .Title div p {
-        font-size: 15px;
+    .Title div h2,
+    p {
+        font-size: 10px;
     }
 
     .boxesss {
