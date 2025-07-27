@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'video', src: '/videos/video24.mp4' },
         { type: 'video', src: '/videos/video26.mp4' },
         { type: 'video', src: '/videos/video27.mp4' },
-        { type: 'image', src: '/img/CW1.jpg' },
-        { type: 'image', src: '/img/CW2.jpg' },
+        { type: 'image', src: '/img/CW1.webp' },
+        { type: 'image', src: '/img/CW2.webp' },
     ];
 
     let currentMediaIndex = 0;
