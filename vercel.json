@@ -1,0 +1,52 @@
+{
+    "rewrites": [
+        {
+            "source": "/",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/about",
+            "destination": "/about.html"
+        },
+        {
+            "source": "/services/CarSeatWashing",
+            "destination": "/services/CarSeatWashing.html"
+        },
+        {
+            "source": "/services/CarSeatWashingDetailing",
+            "destination": "/services/CarSeatWashingDetailing.html"
+        },
+        {
+            "source": "/services/SeatWashing",
+            "destination": "/services/SeatWashing.html"
+        },
+        {
+            "source": "/services/BedWashing",
+            "destination": "/services/BedWashing.html"
+        },
+        {
+            "source": "/services/ChairWashing",
+            "destination": "/services/ChairWashing.html"
+        },
+        {
+            "source": "/services/EmptyHome",
+            "destination": "/services/EmptyHome.html"
+        },
+        {
+            "source": "/corporativeService",
+            "destination": "/corporativeService.html"
+        },
+        {
+            "source": "/comment",
+            "destination": "/comment.html"
+        },
+        {
+            "source": "/sss",
+            "destination": "/sss.html"
+        },
+        {
+            "source": "/contact",
+            "destination": "/contact.html"
+        }
+    ]
+}
