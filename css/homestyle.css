@@ -1,3 +1,67 @@
+/* ====================
+   GENERAL STYLES
+   ==================== */
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+/* Common Styles */
+.HomeMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.TitleContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column
+}
+
+.HizmetCard,
+.HizmetTitle,
+.tintle {
+    background: #165a8e
+}
+
+.HizmetBox,
+.tintle {
+    align-items: center
+}
+
+.NdnCard:hover {
+    transform: scale(1.05) translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .5);
+    cursor: pointer
+}
+
+
+/* ============================
+   LARGE SCREENS (DESKTOP)
+   ============================ */
+
 @media screen and (min-width:1200px) {
 
     .HizmetTitle,
@@ -6,28 +70,15 @@
         font-weight: 700
     }
 
-    .HomeMain {
-        display: flex;
-        flex-direction: column;
-        align-items: center
-    }
-
-    .TitleContainer {
-        width: 100%;
-        display: flex;
-        flex-direction: column
-    }
-
     .Title {
         position: relative;
-        background: #165a8e;
         color: #fff;
         text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 30px;
-        /* Ana başlık (Title) font boyutu küçültüldü */
+        font-size: 24px;
+        /* Corrected Size */
     }
 
     .Title div {
@@ -43,7 +94,8 @@
 
     .Title div h2,
     .Title div p {
-        font-size: 15px
+        font-size: 14px;
+        /* Corrected Size */
     }
 
     .boxesss {
@@ -80,12 +132,6 @@
         transition: transform .3s, box-shadow .3s;
         opacity: 0;
         animation-fill-mode: forwards
-    }
-
-    .HizmetCard,
-    .HizmetTitle,
-    .tintle {
-        background: #165a8e
     }
 
     .NdnCard[data-animation=left] {
@@ -128,12 +174,6 @@
         animation-delay: .6s
     }
 
-    .NdnCard:hover {
-        transform: scale(1.05) translateY(-8px);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, .5);
-        cursor: pointer
-    }
-
     .NdnIcon {
         font-size: 36px;
         flex-shrink: 0
@@ -153,30 +193,6 @@
         color: #ecf0f1
     }
 
-    @keyframes slideInLeft {
-        from {
-            opacity: 0;
-            transform: translateX(-100%)
-        }
-
-        to {
-            opacity: 1;
-            transform: translateX(0)
-        }
-    }
-
-    @keyframes slideInRight {
-        from {
-            opacity: 0;
-            transform: translateX(100%)
-        }
-
-        to {
-            opacity: 1;
-            transform: translateX(0)
-        }
-    }
-
     .HizmetTitle {
         margin-top: 20px;
         width: 100%;
@@ -185,7 +201,6 @@
         align-items: center;
         color: #fff;
         font-size: 40px;
-        /* HizmetTitle font boyutu büyütüldü */
     }
 
     .HizmetContainer {
@@ -207,11 +222,6 @@
         border-radius: 5px;
         box-shadow: inset 0 2px 5px rgba(0, 0, 0, .1);
         transition: background .3s, transform .1s ease-in-out, box-shadow .1s ease-in-out
-    }
-
-    .HizmetBox,
-    .tintle {
-        align-items: center
     }
 
     .HizmetCard:hover {
@@ -313,6 +323,10 @@
     }
 }
 
+/* =========================
+   SMALL SCREENS (MOBILE)
+   ========================= */
+
 @media screen and (max-width:1200px) {
 
     .NdnCard,
@@ -327,28 +341,15 @@
         text-align: left
     }
 
-    .HomeMain {
-        display: flex;
-        flex-direction: column;
-        align-items: center
-    }
-
-    .TitleContainer {
-        width: 100%;
-        display: flex;
-        flex-direction: column
-    }
-
     .Title {
         position: relative;
-        background: #165a8e;
         color: #fff;
         height: 80px;
         display: flex;
         justify-content: left;
         align-items: center;
-        font-size: 18px;
-        /* Ana başlık (Title) font boyutu küçültüldü */
+        font-size: 14px;
+        /* Corrected Size */
         padding-left: 10px
     }
 
@@ -366,7 +367,8 @@
 
     .Title div h2,
     .Title div p {
-        font-size: 10px
+        font-size: 8px;
+        /* Corrected Size */
     }
 
     .boxesss {
@@ -417,12 +419,6 @@
         animation: .8s ease-out forwards slideInLeft
     }
 
-    .HizmetCard,
-    .HizmetTitle,
-    .tintle {
-        background: #165a8e
-    }
-
     .NdnCard:first-child {
         animation-delay: .1s
     }
@@ -445,12 +441,6 @@
 
     .NdnCard:nth-child(6) {
         animation-delay: .6s
-    }
-
-    .NdnCard:hover {
-        transform: scale(1.05) translateY(-8px);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, .5);
-        cursor: pointer
     }
 
     .HizmetCard,
@@ -478,30 +468,6 @@
         color: #ecf0f1
     }
 
-    @keyframes slideInLeft {
-        from {
-            opacity: 0;
-            transform: translateX(-100%)
-        }
-
-        to {
-            opacity: 1;
-            transform: translateX(0)
-        }
-    }
-
-    @keyframes slideInRight {
-        from {
-            opacity: 0;
-            transform: translateX(100%)
-        }
-
-        to {
-            opacity: 1;
-            transform: translateX(0)
-        }
-    }
-
     .HizmetTitle {
         margin-top: 10px;
         width: 100%;
@@ -509,7 +475,6 @@
         justify-content: center;
         align-items: center;
         font-size: 30px;
-        /* HizmetTitle font boyutu büyütüldü */
         font-weight: 700
     }
 
@@ -529,11 +494,6 @@
         justify-content: center;
         align-items: center;
         border-radius: 5px
-    }
-
-    .HizmetBox,
-    .tintle {
-        align-items: center
     }
 
     .HizmetCard:hover {
