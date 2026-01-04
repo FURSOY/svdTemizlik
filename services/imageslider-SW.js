@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Medya dosyalarınızın yolları ve tipleri.
     // Lütfen kendi dosya yollarınızı ve tiplerini buraya ekleyin.
     const mediaSources = [
-        { type: 'image', src: '/img/SW1.webp' },
-        { type: 'video', src: '/videos/video8.mp4' },
-        { type: 'image', src: '/img/SW2.webp' },
-        { type: 'video', src: '/videos/video5.mp4' },
-        { type: 'image', src: '/img/SW4.webp' },
-        { type: 'video', src: '/videos/video7.mp4' },
-        { type: 'image', src: '/img/SW3.webp' },
-        { type: 'video', src: '/videos/video6.mp4' },
+        { type: 'image', src: '../img/SW1.webp', alt: 'Ankara Koltuk Takımı Yıkama' },
+        { type: 'video', src: '../videos/video8.mp4' },
+        { type: 'image', src: '../img/SW2.webp', alt: 'Profesyonel Koltuk Temizlik Ankara' },
+        { type: 'video', src: '../videos/video5.mp4' },
+        { type: 'image', src: '../img/SW4.webp', alt: 'Buharlı Koltuk Yıkama Hizmeti' },
+        { type: 'video', src: '../videos/video7.mp4' },
+        { type: 'image', src: '../img/SW3.webp', alt: 'Koltuk Leke Çıkarma İşlemi Öncesi Sonrası' },
+        { type: 'video', src: '../videos/video6.mp4' },
     ];
 
     let currentMediaIndex = 0;
@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (currentMedia.type === 'image') {
             mediaDisplay.src = currentMedia.src;
+            mediaDisplay.alt = currentMedia.alt || "Ankara Koltuk Yıkama Hizmeti"; // Alt text güncelleme
             mediaDisplay.style.display = 'block';
             videoDisplay.style.display = 'none';
             videoDisplay.pause(); // Video oynuyorsa durdur

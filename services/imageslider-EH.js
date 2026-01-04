@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Medya dosyalarınızın yolları ve tipleri.
     // Lütfen kendi dosya yollarınızı ve tiplerini buraya ekleyin.
     const mediaSources = [
-        { type: 'video', src: '/videos/video19.mp4' },
+        { type: 'video', src: '../videos/video19.mp4' },
     ];
 
     let currentMediaIndex = 0;
@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (currentMedia.type === 'image') {
             mediaDisplay.src = currentMedia.src;
+            mediaDisplay.alt = currentMedia.alt || "Ankara Boş Ev Temizliği Hizmeti"; // Alt text güncelleme
             mediaDisplay.style.display = 'block';
             videoDisplay.style.display = 'none';
             videoDisplay.pause(); // Video oynuyorsa durdur

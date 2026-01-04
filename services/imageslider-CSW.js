@@ -7,18 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Medya dosyalarınızın yolları ve tipleri.
     // Lütfen kendi dosya yollarınızı ve tiplerini buraya ekleyin.
     const mediaSources = [
-        { type: 'image', src: '/img/CSW2.webp' },
-        { type: 'video', src: '/videos/video12.mp4' },
-        { type: 'video', src: '/videos/video10.mp4' },
-        { type: 'image', src: '/img/CSW1.webp' },
-        { type: 'video', src: '/videos/video11.mp4' },
-        { type: 'video', src: '/videos/video13.mp4' },
-        { type: 'video', src: '/videos/video14.mp4' },
-        { type: 'video', src: '/videos/video15.mp4' },
-        { type: 'image', src: '/img/CSW4.webp' },
-        { type: 'video', src: '/videos/video16.mp4' },
-        { type: 'image', src: '/img/CSW3.webp' },
-        { type: 'video', src: '/videos/video20.mp4' },
+        { type: 'image', src: '../img/CSW2.webp', alt: 'Ankara Araç Koltuğu Yıkama - Öncesi Sonrası' },
+        { type: 'video', src: '../videos/video12.mp4' },
+        { type: 'video', src: '../videos/video10.mp4' },
+        { type: 'image', src: '../img/CSW1.webp', alt: 'Buharlı Araç Koltuk Temizliği İşlemi' },
+        { type: 'video', src: '../videos/video11.mp4' },
+        { type: 'video', src: '../videos/video13.mp4' },
+        { type: 'video', src: '../videos/video14.mp4' },
+        { type: 'video', src: '../videos/video15.mp4' },
+        { type: 'image', src: '../img/CSW4.webp', alt: 'Araç İçi Detaylı Koltuk Yıkama Ankara' },
+        { type: 'video', src: '../videos/video16.mp4' },
+        { type: 'image', src: '../img/CSW3.webp', alt: 'Profesyonel Araç Koltuk Leke Çıkarma' },
+        { type: 'video', src: '../videos/video20.mp4' },
     ];
 
     let currentMediaIndex = 0;
@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (currentMedia.type === 'image') {
             mediaDisplay.src = currentMedia.src;
+            mediaDisplay.alt = currentMedia.alt || "Ankara Araç Koltuğu Yıkama Hizmeti"; // Alt text güncelleme
             mediaDisplay.style.display = 'block';
             videoDisplay.style.display = 'none';
             videoDisplay.pause(); // Video oynuyorsa durdur

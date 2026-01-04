@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Medya dosyalarınızın yolları ve tipleri.
     // Lütfen kendi dosya yollarınızı ve tiplerini buraya ekleyin.
     const mediaSources = [
-        { type: 'video', src: '/videos/video23.mp4' },
-        { type: 'video', src: '/videos/video24.mp4' },
-        { type: 'video', src: '/videos/video26.mp4' },
-        { type: 'video', src: '/videos/video27.mp4' },
-        { type: 'image', src: '/img/CW1.webp' },
-        { type: 'image', src: '/img/CW2.webp' },
+        { type: 'video', src: '../videos/video23.mp4' },
+        { type: 'video', src: '../videos/video24.mp4' },
+        { type: 'video', src: '../videos/video26.mp4' },
+        { type: 'video', src: '../videos/video27.mp4' },
+        { type: 'image', src: '../img/CW1.webp', alt: 'Ankara Sandalye Yıkama - Leke Çıkarma' },
+        { type: 'image', src: '../img/CW2.webp', alt: 'Ofis Sandalyesi Buharlı Temizlik' },
     ];
 
     let currentMediaIndex = 0;
@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (currentMedia.type === 'image') {
             mediaDisplay.src = currentMedia.src;
+            mediaDisplay.alt = currentMedia.alt || "Ankara Sandalye Yıkama Hizmeti"; // Alt text güncelleme
             mediaDisplay.style.display = 'block';
             videoDisplay.style.display = 'none';
             videoDisplay.pause(); // Video oynuyorsa durdur

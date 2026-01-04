@@ -7,17 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Medya dosyalarınızın yolları ve tipleri.
     // Lütfen kendi dosya yollarınızı ve tiplerini buraya ekleyin.
     const mediaSources = [
-        { type: 'video', src: '/videos/video22.mp4' },
-        { type: 'video', src: '/videos/video21.mp4' },
-        { type: 'video', src: '/videos/video17.mp4' },
-        { type: 'image', src: '/img/CSWD1.webp' },
-        { type: 'video', src: '/videos/video18.mp4' },
-        { type: 'video', src: '/videos/video29.mp4' },
-        { type: 'video', src: '/videos/video30.mp4' },
-        { type: 'video', src: '/videos/video31.mp4' },
-        { type: 'video', src: '/videos/video32.mp4' },
-        { type: 'video', src: '/videos/video33.mp4' },
-        { type: 'image', src: '/img/CSWD2.webp' },
+        { type: 'image', src: '../img/CSWD1.webp', alt: 'Ankara Detaylı Araç İçi Temizlik - Koltuk Yıkama' },
+        { type: 'video', src: '../videos/video18.mp4' },
+        { type: 'image', src: '../img/CSWD2.webp', alt: 'Araç İçi Detaylı Vakumlu Temizlik' },
+        { type: 'video', src: '../videos/video21.mp4' },
+        { type: 'image', src: '../img/CSWD3.webp', alt: 'Buharlı Araç Detaylı Temizlik Ankara' },
+        { type: 'video', src: '../videos/video25.mp4' },
+        { type: 'image', src: '../img/CSWD4.webp', alt: 'Profesyonel Oto Detaylı Temizlik Hizmeti' },
+        { type: 'video', src: '../videos/video22.mp4' },
+        { type: 'image', src: '../img/CSWD5.webp', alt: 'Araç Tavan ve Taban Temizliği' },
     ];
 
     let currentMediaIndex = 0;
@@ -33,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (currentMedia.type === 'image') {
             mediaDisplay.src = currentMedia.src;
+            mediaDisplay.alt = currentMedia.alt || "Ankara Detaylı Araç Temizliği"; // Alt text güncelleme
             mediaDisplay.style.display = 'block';
             videoDisplay.style.display = 'none';
             videoDisplay.pause(); // Video oynuyorsa durdur

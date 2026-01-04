@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Medya dosyalarınızın yolları ve tipleri.
     // Lütfen kendi dosya yollarınızı ve tiplerini buraya ekleyin.
     const mediaSources = [
-        { type: 'image', src: '/img/BW1.webp' },
-        { type: 'video', src: '/videos/video9.mp4' },
-        { type: 'image', src: '/img/BW2.webp' },
-        { type: 'image', src: '/img/BW3.webp' },
+        { type: 'image', src: '../img/BW1.webp', alt: 'Ankara Yatak Yıkama Hizmeti' },
+        { type: 'video', src: '../videos/video9.mp4' },
+        { type: 'image', src: '../img/BW2.webp', alt: 'Buharlı Yatak Temizliği' },
+        { type: 'image', src: '../img/BW3.webp', alt: 'Yatak Leke ve Akar Temizliği' },
     ];
 
     let currentMediaIndex = 0;
@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (currentMedia.type === 'image') {
             mediaDisplay.src = currentMedia.src;
+            mediaDisplay.alt = currentMedia.alt || "Ankara Yatak Yıkama Hizmeti"; // Alt text güncelleme
             mediaDisplay.style.display = 'block';
             videoDisplay.style.display = 'none';
             videoDisplay.pause(); // Video oynuyorsa durdur
