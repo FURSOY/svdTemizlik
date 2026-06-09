@@ -85,14 +85,14 @@
     <!-- Header / Nav -->
     <header class="header">
         <nav class="nav">
-            <a href="index.html" class="nav__logo">
+            <a href="/" class="nav__logo">
                 <img src="img/logo1.webp" alt="SVD Temizlik Logo" width="120" height="48">
             </a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li><a href="index.html" class="nav__link">Ana Sayfa</a></li>
-                    <li><a href="about.html" class="nav__link">Hakkımızda</a></li>
+                    <li><a href="/" class="nav__link">Ana Sayfa</a></li>
+                    <li><a href="/about" class="nav__link">Hakkımızda</a></li>
                     
                     <!-- Dropdown Services -->
                     <li class="dropdown__item">
@@ -100,19 +100,19 @@
                             Hizmetlerimiz <i class="ri-arrow-down-s-line dropdown__arrow"></i>
                         </div>
                         <ul class="dropdown__menu">
-                            <li><a href="services/CarSeatWashing.html" class="dropdown__link"><i class="ri-car-washing-line"></i> Araç Koltuğu Yıkama</a></li>
-                            <li><a href="services/CarSeatWashingDetailing.html" class="dropdown__link"><i class="ri-car-line"></i> Detaylı Araç Temizliği</a></li>
-                            <li><a href="services/SeatWashing.html" class="dropdown__link"><i class="ri-sofa-line"></i> Koltuk Takımı Yıkama</a></li>
-                            <li><a href="services/BedWashing.html" class="dropdown__link"><i class="ri-hotel-bed-line"></i> Yatak Yıkama</a></li>
-                            <li><a href="services/ChairWashing.html" class="dropdown__link"><i class="ri-armchair-line"></i> Sandalye Yıkama</a></li>
-                            <li><a href="services/EmptyHome.html" class="dropdown__link"><i class="ri-home-smile-line"></i> Boş Ev Temizliği</a></li>
+                            <li><a href="/services/carseatwashing" class="dropdown__link"><i class="ri-car-washing-line"></i> Araç Koltuğu Yıkama</a></li>
+                            <li><a href="/services/carseatwashingdetailing" class="dropdown__link"><i class="ri-car-line"></i> Detaylı Araç Temizliği</a></li>
+                            <li><a href="/services/seatwashing" class="dropdown__link"><i class="ri-sofa-line"></i> Koltuk Takımı Yıkama</a></li>
+                            <li><a href="/services/bedwashing" class="dropdown__link"><i class="ri-hotel-bed-line"></i> Yatak Yıkama</a></li>
+                            <li><a href="/services/chairwashing" class="dropdown__link"><i class="ri-armchair-line"></i> Sandalye Yıkama</a></li>
+                            <li><a href="/services/emptyhome" class="dropdown__link"><i class="ri-home-smile-line"></i> Boş Ev Temizliği</a></li>
                         </ul>
                     </li>
                     
-                    <li><a href="corporativeService.html" class="nav__link">Kurumsal Hizmet</a></li>
-                    <li><a href="comment.html" class="nav__link">Memnuniyet</a></li>
-                    <li><a href="sss.html" class="nav__link">S.S.S.</a></li>
-                    <li><a href="contact.html" class="nav__link">İletişim</a></li>
+                    <li><a href="/corporativeservice" class="nav__link">Kurumsal Hizmet</a></li>
+                    <li><a href="/comment" class="nav__link">Memnuniyet</a></li>
+                    <li><a href="/sss" class="nav__link">S.S.S.</a></li>
+                    <li><a href="/contact" class="nav__link">İletişim</a></li>
                 </ul>
             </div>
 
@@ -137,7 +137,7 @@
                 <p class="hero__subtitle">Koltuk, yatak ve araç içi detaylı temizlik hizmetlerinde evinize veya iş yerinize kadar geliyoruz. Güçlü buhar teknolojisi ile derinlemesine hijyen sağlıyoruz.</p>
                 
                 <div class="hero__cta">
-                    <a href="services/SeatWashing.html" class="btn btn-primary btn-lg">
+                    <a href="#services" class="btn btn-primary btn-lg">
                         <i class="ri-sparkling-fill"></i> Hizmetleri Keşfet
                     </a>
                     <a href="https://wa.me/905305070399" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
@@ -148,14 +148,14 @@
         </section>
 
         <!-- Services Preview Section -->
-        <section class="section" style="background-color: var(--clr-primary);">
+        <section id="services" class="section" style="background-color: var(--clr-primary);">
             <div class="container">
                 <h2 class="section-title reveal">Profesyonel Hizmetlerimiz</h2>
                 <p class="section-subtitle reveal">Müşteri memnuniyeti garantisiyle, en yeni teknoloji ekipmanlar kullanarak sunduğumuz %100 hijyenik mobil temizlik hizmetlerimiz.</p>
                 
                 <div class="services-grid">
                     <!-- Sınıf 1 -->
-                    <a href="services/CarSeatWashing.html" class="service-card reveal">
+                    <a href="/services/carseatwashing" class="service-card reveal">
                         <img src="img/home4.webp" alt="Araç Koltuğu Yıkama" class="service-card__img" loading="lazy">
                         <div class="service-card__overlay"></div>
                         <div class="service-card__content">
@@ -165,7 +165,7 @@
                     </a>
 
                     <!-- Sınıf 2 -->
-                    <a href="services/CarSeatWashingDetailing.html" class="service-card reveal" style="transition-delay: 100ms;">
+                    <a href="/services/carseatwashingdetailing" class="service-card reveal" style="transition-delay: 100ms;">
                         <img src="img/home8.webp" alt="Araç Detaylı Temizlik" class="service-card__img" loading="lazy">
                         <div class="service-card__overlay"></div>
                         <div class="service-card__content">
@@ -175,7 +175,7 @@
                     </a>
 
                     <!-- Sınıf 3 -->
-                    <a href="services/SeatWashing.html" class="service-card reveal" style="transition-delay: 200ms;">
+                    <a href="/services/seatwashing" class="service-card reveal" style="transition-delay: 200ms;">
                         <img src="img/home5.webp" alt="Koltuk Takımı Yıkama" class="service-card__img" loading="lazy">
                         <div class="service-card__overlay"></div>
                         <div class="service-card__content">
@@ -185,7 +185,7 @@
                     </a>
 
                     <!-- Sınıf 4 -->
-                    <a href="services/BedWashing.html" class="service-card reveal" style="transition-delay: 300ms;">
+                    <a href="/services/bedwashing" class="service-card reveal" style="transition-delay: 300ms;">
                         <img src="img/home9.webp" alt="Yatak Yıkama" class="service-card__img" loading="lazy">
                         <div class="service-card__overlay"></div>
                         <div class="service-card__content">
@@ -195,7 +195,7 @@
                     </a>
 
                     <!-- Sınıf 5 -->
-                    <a href="services/EmptyHome.html" class="service-card reveal" style="transition-delay: 400ms;">
+                    <a href="/services/emptyhome" class="service-card reveal" style="transition-delay: 400ms;">
                         <img src="img/home6.webp" alt="Boş Ev Temizliği" class="service-card__img" loading="lazy">
                         <div class="service-card__overlay"></div>
                         <div class="service-card__content">
@@ -205,7 +205,7 @@
                     </a>
                     
                     <!-- Kurumsal -->
-                    <a href="corporativeService.html" class="service-card reveal" style="transition-delay: 500ms;">
+                    <a href="/corporativeservice" class="service-card reveal" style="transition-delay: 500ms;">
                         <img src="img/home7.webp" alt="Kurumsal Hizmet" class="service-card__img" loading="lazy">
                         <div class="service-card__overlay"></div>
                         <div class="service-card__content">
@@ -290,7 +290,7 @@
                     </p>
                 </div>
                 <div class="reveal" style="margin-top: var(--sp-xl);">
-                    <a href="about.html" class="btn btn-outline"><i class="ri-information-line"></i> Hakkımızda Detaylı Bilgi</a>
+                    <a href="/about" class="btn btn-outline"><i class="ri-information-line"></i> Hakkımızda Detaylı Bilgi</a>
                 </div>
             </div>
         </section>
@@ -352,7 +352,7 @@
     <footer class="footer">
         <div class="footer__inner">
             <div class="footer__brand">
-                <a href="index.html" class="footer__logo">
+                <a href="/" class="footer__logo">
                     <img src="img/logo1.webp" alt="SVD Temizlik Logo" width="150" height="60" loading="lazy">
                 </a>
                 <p class="footer__desc">
@@ -362,11 +362,11 @@
             
             <div class="footer__links">
                 <h4 class="footer__heading">Hızlı Erişim</h4>
-                <a href="index.html" class="footer__link">Ana Sayfa</a>
-                <a href="about.html" class="footer__link">Kurumsal / Hakkımızda</a>
-                <a href="services/SeatWashing.html" class="footer__link">Hizmetlerimiz</a>
-                <a href="comment.html" class="footer__link">Müşteri Yorumları</a>
-                <a href="sss.html" class="footer__link">Sıkça Sorulan Sorular</a>
+                <a href="/" class="footer__link">Ana Sayfa</a>
+                <a href="/about" class="footer__link">Kurumsal / Hakkımızda</a>
+                <a href="/#services" class="footer__link">Hizmetlerimiz</a>
+                <a href="/comment" class="footer__link">Müşteri Yorumları</a>
+                <a href="/sss" class="footer__link">Sıkça Sorulan Sorular</a>
             </div>
 
             <div class="footer__contact">
